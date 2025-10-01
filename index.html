@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/scss/base/main.css">
+    <link rel="stylesheet" href="./assets/scss/base/main.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,7 +33,7 @@
 
         // section
         let start = 0;
-        let limit = 3; // mỗi lần load 3 item
+        let limit = 3; 
         let allData = [];
         let firstLoad = true;
 
@@ -51,7 +51,7 @@
                 
                 $("#content-project").append(
                     `
-                        <li style="margin-bottom: 10px;display:block">
+                        <li>
                             <a class="project fancybox"
                                 href="${item.href}" 
                                 rel="gallery"
@@ -71,7 +71,7 @@
         }
 
         $(function(){
-            $("#header").load("partials/header.html", function (response, status, xhr) {
+            $("#header").load("./partials/header.html", function (response, status, xhr) {
             
             
             if (status == "error") {
@@ -87,7 +87,7 @@
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $(this).addClass("active");
-                    $("#main").load("pages/portfolio.html", function() {
+                    $("#main").load("./pages/portfolio.html", function() {
                         start = 0;
                         limit = 3;
                         firstLoad = true;
@@ -99,29 +99,29 @@
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $(this).addClass("active");
-                    $("#main").load("pages/model.html");
+                    $("#main").load("./pages/model.html");
                 });
                 $(".header-team").on("click", function(e) {
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $(this).addClass("active");
-                    $("#main").load("pages/team.html");
+                    $("#main").load("./pages/team.html");
                 });
                 $(".header-about").on("click", function(e) {
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $(this).addClass("active");
-                    $("#main").load("pages/about.html");
+                    $("#main").load("./pages/about.html");
                 });
                 $(".header-contact").on("click", function(e) {
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $(this).addClass("active");
-                    $("#main").load("pages/contact.html");
+                    $("#main").load("./pages/contact.html");
                 });
             });
-            $("#footer").load("partials/footer.html");
-            $("#main").load("pages/portfolio.html");
+            $("#footer").load("./partials/footer.html");
+            $("#main").load("./pages/portfolio.html");
         });
 
         $(document).ready(function () {
