@@ -71,7 +71,7 @@
         }
 
         $(function(){
-            $("#header").load("/partials/header.html", function (response, status, xhr) {
+            $("#header").load("./partials/header.html", function (response, status, xhr) {
             
             
             if (status == "error") {
@@ -87,7 +87,7 @@
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $(this).addClass("active");
-                    $("#main").load("/pages/portfolio.html", function() {
+                    $("#main").load("./pages/portfolio.html", function() {
                         start = 0;
                         limit = 3;
                         firstLoad = true;
@@ -120,8 +120,8 @@
                     $("#main").load("/pages/contact.html");
                 });
             });
-            $("#footer").load("/partials/footer.html");
-            $("#main").load("/pages/portfolio.html");
+            $("#footer").load("./partials/footer.html");
+            $("#main").load("./pages/portfolio.html");
         });
 
         $(document).ready(function () {
