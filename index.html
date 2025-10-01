@@ -71,7 +71,10 @@
         }
 
         $(function(){
-            $("#header").load("/partials/header.html", function () {
+            $("#header").load("/partials/header.html", function (response, status, xhr) {
+            if (status == "error") {
+    $("#content").html("<p>Lỗi: " + xhr.status + " " + xhr.statusText + "</p>");
+  }
                 if (path === "index.html"){ 
                     $(".header-portfolio").addClass("active");
                 }
