@@ -72,9 +72,12 @@
 
         $(function(){
             $("#header").load("/partials/header.html", function (response, status, xhr) {
+            
+            
             if (status == "error") {
-    $("#content").html("<p>Lỗi: " + xhr.status + " " + xhr.statusText + "</p>");
-  }
+                console.log(response);
+                
+            }
                 if (path === "index.html"){ 
                     $(".header-portfolio").addClass("active");
                 }
