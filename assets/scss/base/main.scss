@@ -1,0 +1,32 @@
+@use "header";
+@use "footer";
+@use "section";
+@use "responsive";
+
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+
+    body {
+        
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        -webkit-text-size-adjust: none;
+        background: #FFF;
+        font-weight: 300;
+        font-family: 'Archivo Narrow', sans-serif;
+
+        a {
+            text-decoration: none;
+            color: #afafaf;
+            transition: 0.1s all ease;
+        }
+        h4 {
+            margin: 0px;
+        }
+    }
+}

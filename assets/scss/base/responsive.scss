@@ -1,0 +1,312 @@
+@media (max-width: 575px) {
+    #header {
+        .main_menu {
+            display: none !important;
+        }
+
+        .rd-mobilemenu {
+
+        }
+        .rd-mobilemenu.active {
+            display: block !important;
+            margin-top: 39px;
+            width: 100%;
+
+            .rd-mobilemenu_ul {
+                background-color: rgba(0, 0, 0,0.9);
+                ul {
+
+                    li {
+                        padding-left: 10px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .logo {
+            margin-right: 10px;
+        }
+    }
+
+    #main {
+        .top {
+            
+            .slogan {
+                right: 0%;
+                box-sizing: border-box;
+                padding: 50px 25px 0px 25px;
+
+                #logo {
+                    img {
+                        width: 35%;
+                    }
+                }
+                p {
+                    position: relative;
+                    left: 0px;
+                    line-height: inherit;
+                    font-size: 12px;
+                    bottom: inherit;
+                }
+            }
+        }
+
+        .custom_wrap {
+            .top {
+
+                .slogan {
+                    #logo {
+                        width: 20%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    p {
+                        top: 75px;
+                    }
+                }
+            }
+
+
+            //about page
+        .block_about {
+            .container {
+                .content {
+                    .item {
+                        .detail {
+                            .detail-title {
+                                .title-award {
+                                    width: 50% !important;
+                                }
+                            }
+                            
+
+                                .detail-item.awards {
+                                    width: 50% !important;
+                                    display: block !important;
+
+                                    ul {
+                                        width: 100%;
+                                        li {
+                                            list-style: none !important;
+                                            margin: 0px;
+                                        }
+                                    }
+                                }
+                                .detail-item.publication {
+                                    width: 50% !important;
+                                    display: block !important;
+
+                                    ul {
+                                        width: 100%;
+                                        li {
+                                            list-style: none !important;
+                                            margin: 0px;
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                }
+            }
+        }
+        }
+
+        .bg_contact {
+            .container {
+                .contact {
+
+                    form {
+                        padding: 0px 25px;
+                        display: block;
+                        box-sizing: border-box;
+                        margin: 70px 0px;
+                        label {
+                        }
+                        input {
+                            width: 100%;
+                            box-sizing: border-box;
+                        }
+                        textarea {
+                            display: block;
+                            width: 100%;
+                            box-sizing: border-box;
+                        }
+                        .button {
+                            width: 30%;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+
+    #footer {
+        .infor_left {
+            width: 100%;
+            margin: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            
+            .infor_left_email {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        .infor_right {
+            display: none;
+        }
+
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #header {
+        .main_menu {
+            display: none !important;
+        }
+        
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #header {
+        .rd-mobilepanel {
+            display: none;
+        }
+    }
+
+
+    
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #main {
+        .top {
+            
+            .slogan {
+                right: 0%;
+                box-sizing: border-box;
+                padding: 50px 25px 0px 25px;
+
+                #logo {
+                    img {
+                        width: 100%;
+                    }
+                }
+                p {
+                    position: relative;
+                    left: 0px;
+                    line-height: inherit;
+                    font-size: 16px;
+                    bottom: -115px;
+                }
+            }
+        }
+
+        .custom_wrap {
+            .top {
+
+                .slogan {
+                    #logo {
+                        width: 20%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    p {
+                        top: 255px;
+                    }
+                }
+            }
+
+
+            //about page
+        .block_about {
+            .container {
+                .content {
+                    .item {
+                        .detail {
+                            .detail-title {
+                                .title-award {
+                                    width: 50% !important;
+                                }
+                            }
+                            
+
+                                .detail-item.awards {
+                                    width: 50% !important;
+                                    display: block !important;
+
+                                    ul {
+                                        width: 100%;
+                                        li {
+                                            list-style: none !important;
+                                            margin: 0px;
+                                        }
+                                    }
+                                }
+                                .detail-item.publication {
+                                    width: 50% !important;
+                                    display: block !important;
+
+                                    ul {
+                                        width: 100%;
+                                        li {
+                                            list-style: none !important;
+                                            margin: 0px;
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                }
+            }
+        }
+        }
+
+        .bg_contact {
+            .container {
+                .contact {
+
+                    form {
+                        padding: 0px 25px;
+                        display: block;
+                        box-sizing: border-box;
+                        margin: 70px 0px;
+                        label {
+                        }
+                        input {
+                            width: 100%;
+                            box-sizing: border-box;
+                        }
+                        textarea {
+                            display: block;
+                            width: 100%;
+                            box-sizing: border-box;
+                        }
+                        .button {
+                            width: 30%;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
+
+@media (min-width: 1200px) {
+    #header {
+        .rd-mobilepanel {
+            display: none;
+        }
+    }
+}

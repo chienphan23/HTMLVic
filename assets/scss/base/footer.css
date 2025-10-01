@@ -1,0 +1,51 @@
+#footer {
+  width: 100%;
+  background: rgba(218, 218, 218, 0.9);
+  position: fixed;
+  bottom: 0;
+  z-index: 1300;
+  display: flex;
+  justify-content: space-between;
+}
+#footer .infor_left {
+  float: left;
+  width: calc(100% - 170px);
+  margin: 15px 0px 0px 0;
+  padding: 0px 15px;
+}
+#footer .infor_left p {
+  line-height: 25px;
+  font-size: 14px;
+  margin: 0px;
+}
+#footer .infor_left p span {
+  display: inline-block;
+}
+#footer .infor_left p .infor_left_email::before {
+  content: "-";
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#footer .infor_right {
+  float: right;
+  margin-right: 15px;
+}
+#footer .infor_right ul {
+  float: right;
+  width: 100%;
+  text-align: right;
+  margin: 0px;
+}
+#footer .infor_right ul li {
+  display: inline-block;
+  margin: 0 5px;
+  text-align: center;
+}
+#footer .infor_right ul li a {
+  position: relative;
+  color: #000;
+  display: block;
+  font-size: 18px;
+  padding: 14px 0px;
+}/*# sourceMappingURL=footer.css.map */

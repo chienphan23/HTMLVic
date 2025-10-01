@@ -1,0 +1,50 @@
+#header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  z-index: 1100;
+  color: white;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+}
+#header .header-hover:hover a {
+  color: white;
+}
+#header li.header-hover:hover a {
+  color: white !important;
+  background: #333;
+}
+#header .logo {
+  float: left;
+  margin: 0px 0px 0px 1%;
+}
+#header .logo a {
+  display: block;
+  padding: 10px 0px;
+  font-size: 16px;
+}
+#header .main_menu {
+  float: right;
+}
+#header .main_menu .menunav {
+  float: right;
+  margin-right: 1%;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#header .main_menu .menunav .active {
+  color: white;
+}
+#header .main_menu .menunav li {
+  display: inline-block;
+  text-align: center;
+}
+#header .main_menu .menunav li a {
+  display: block;
+  padding: 10px 20px;
+  color: #afafaf;
+}/*# sourceMappingURL=header.css.map */

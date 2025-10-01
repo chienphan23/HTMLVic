@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/scss/base/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+
+    <title>Vic Nguyen Design</title>
+</head>
+
+<body>
+    <header id="header">
+        
+    </header>
+
+    <section id="main" class="portfolio">
+        
+    </section>
+
+    <footer id="footer">
+        
+    </footer>
+
+    <script>
+        //header
+        let path = window.location.pathname.split("/").pop();
+        
+
+        // section
+        let start = 0;
+        let limit = 3; // mỗi lần load 3 item
+        let allData = [];
+        let firstLoad = true;
+
+        // Hàm load item
+        function loadItems() {
+            
+            currentLimit = limit;
+            if (firstLoad && window.innerWidth <= 768) {
+                currentLimit = 9;
+                firstLoad = false; 
+            }
+            let slice = allData.slice(start, start + currentLimit);
+            
+            $.each(slice, function (i, item) {
+                
+                $("#content-project").append(
+                    `
+                        <li style="margin-bottom: 10px;display:block">
+                            <a class="project fancybox"
+                                href="${item.href}" 
+                                rel="gallery"
+                                title="Cultural center in Korea 01">
+                                <div class="image">
+                                    <img src="${item.href}">
+                                </div>
+                                <div class="title">
+                                    <h4>${item.title}</h4>
+                                </div>
+                            </a>
+                        </li>
+                    `
+                );
+            });
+            start += currentLimit;
+        }
+
+        $(function(){
+            $("#header").load("/partials/header.html", function () {
+                if (path === "index.html"){ 
+                    $(".header-portfolio").addClass("active");
+                }
+                
+                $(".header-portfolio").on("click", function(e) {
+                    
+                    e.preventDefault();
+                    $("#header a").removeClass("active");
+                    $(this).addClass("active");
+                    $("#main").load("/pages/portfolio.html", function() {
+                        start = 0;
+                        limit = 3;
+                        firstLoad = true;
+                        loadItems();
+                    });
+                    
+                });
+                $(".header-model").on("click", function(e) {
+                    e.preventDefault();
+                    $("#header a").removeClass("active");
+                    $(this).addClass("active");
+                    $("#main").load("/pages/model.html");
+                });
+                $(".header-team").on("click", function(e) {
+                    e.preventDefault();
+                    $("#header a").removeClass("active");
+                    $(this).addClass("active");
+                    $("#main").load("/pages/team.html");
+                });
+                $(".header-about").on("click", function(e) {
+                    e.preventDefault();
+                    $("#header a").removeClass("active");
+                    $(this).addClass("active");
+                    $("#main").load("/pages/about.html");
+                });
+                $(".header-contact").on("click", function(e) {
+                    e.preventDefault();
+                    $("#header a").removeClass("active");
+                    $(this).addClass("active");
+                    $("#main").load("/pages/contact.html");
+                });
+            });
+            $("#footer").load("/partials/footer.html");
+            $("#main").load("/pages/portfolio.html");
+        });
+
+        $(document).ready(function () {
+            //header
+            if (path === ""){ 
+                path = "index.html";
+            }
+             // Open/close menu_nav
+            
+            //section
+            $.getJSON("data/project.json", function (data) {
+                allData = data;
+                loadItems();
+
+                $(window).on("scroll", function () {
+                    
+                    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 50) {
+                        if (start < allData.length) {
+                            loadItems();
+                        }
+                    }
+                });
+            });
+        });
+
+        // đóng mở menu
+        $(document).on("click", ".rd-mobilepanel_toggle", function () {
+                $('.rd-mobilemenu').toggleClass('active');
+        });
+        $(document).on("click", ".rd-mobilemenu.active", function (e) {
+            $('.rd-mobilemenu').removeClass('active');
+            
+        })
+
+    </script>
+</body>
+
+</html>
