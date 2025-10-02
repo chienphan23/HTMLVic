@@ -15,42 +15,52 @@
 
 <body>
     <header id="header">
-        
+
     </header>
 
     <section id="main" class="portfolio">
-        
+
     </section>
 
     <footer id="footer">
-        
+
     </footer>
 
     <script>
         //header
         let path = window.location.pathname.split("/").pop();
-        
+
 
         // section
         let start = 0;
-        let limit = 3; 
+        let limit = 12;
         let allData = [];
         let firstLoad = true;
 
+        // cắt mảng
+        function splitIntoGroups(arr, groups) {
+            let result = Array.from({ length: groups }, () => []);
+            let i = 0;
+
+            arr.forEach(item => {
+                result[i % groups].push(item);
+                i++;
+            });
+
+            return result;
+        }
         // Hàm load item
         function loadItems() {
-            
+
             currentLimit = limit;
-            if (firstLoad && window.innerWidth <= 768) {
-                currentLimit = 9;
-                firstLoad = false; 
-            }
             let slice = allData.slice(start, start + currentLimit);
-            
-            $.each(slice, function (i, item) {
-                
-                $("#content-project").append(
-                    `
+            let groups = splitIntoGroups(slice, 4);
+
+            $.each(groups, function (colIndex, groupItems) {
+                let ul = $(`.grid-container .column-${colIndex + 1}`);
+                $.each(groupItems, function (i, item) {
+
+                    let li = `
                         <li>
                             <a class="project fancybox"
                                 href="${item.href}" 
@@ -64,56 +74,58 @@
                                 </div>
                             </a>
                         </li>
-                    `
-                );
+                    `;
+                    ul.append(li);
+                })
+                $('.grid-container').append(ul);
             });
             start += currentLimit;
         }
 
-        $(function(){
+        $(function () {
             $("#header").load("./partials/header.html", function (response, status, xhr) {
-            
-            
-            if (status == "error") {
-                console.log(response);
-                
-            }
-                if (path === "index.html"){ 
+
+
+                if (status == "error") {
+                    console.log(response);
+
+                }
+                if (path === "index.html") {
                     $(".header-portfolio").addClass("active");
                 }
-                
-                $(".header-portfolio").on("click", function(e) {
-                    
+
+                $(".header-portfolio").on("click", function (e) {
+
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $("#header .header-portfolio").addClass("active");
-                    $("#main").load("./pages/portfolio.html", function() {
+                    $("#main").load("./pages/portfolio.html", function () {
                         start = 0;
-                        limit = 3;
+                        limit = 12;
                         firstLoad = true;
                         loadItems();
                     });
-                    
+
                 });
-                $(".header-model").on("click", function(e) {
+                $(".header-model").on("click", function (e) {
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $(this).addClass("active");
                     $("#main").load("./pages/model.html");
                 });
-                $(".header-team").on("click", function(e) {
+                $(".header-team").on("click", function (e) {
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $(this).addClass("active");
                     $("#main").load("./pages/team.html");
                 });
-                $(".header-about").on("click", function(e) {
+                $(".header-about").on("click", function (e) {
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $(this).addClass("active");
                     $("#main").load("./pages/about.html");
                 });
-                $(".header-contact").on("click", function(e) {
+                $(".header-contact").on("click", function (e) {
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $(this).addClass("active");
@@ -121,8 +133,8 @@
                 });
             });
             $("#footer").load("./partials/footer.html");
-            $("#main").load("./pages/portfolio.html", function() {
-                $(".header-contact").on("click", function(e) {
+            $("#main").load("./pages/portfolio.html", function () {
+                $(".header-contact").on("click", function (e) {
                     e.preventDefault();
                     $("#header a").removeClass("active");
                     $("#header .header-contact").addClass("active");
@@ -133,18 +145,18 @@
 
         $(document).ready(function () {
             //header
-            if (path === ""){ 
+            if (path === "") {
                 path = "index.html";
             }
-             // Open/close menu_nav
-            
+            // Open/close menu_nav
+
             //section
             $.getJSON("data/project.json", function (data) {
                 allData = data;
                 loadItems();
 
                 $(window).on("scroll", function () {
-                    
+
                     if ($(window).scrollTop() + $(window).height() >= $(document).height() - 50) {
                         if (start < allData.length) {
                             loadItems();
@@ -156,11 +168,13 @@
 
         // đóng mở menu
         $(document).on("click", ".rd-mobilepanel_toggle", function () {
-                $('.rd-mobilemenu').toggleClass('active');
+            $('.rd-mobilemenu').toggleClass('active');
         });
         $(document).on("click", ".rd-mobilemenu.active", function (e) {
-            $('.rd-mobilemenu').removeClass('active');
-            
+            if(e.target.className.includes("active")){
+                $('.rd-mobilemenu').removeClass('active');
+            }
+
         })
 
     </script>

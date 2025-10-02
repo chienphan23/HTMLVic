@@ -1,8 +1,11 @@
 @media (max-width: 575px) {
     #header {
+
+        
         .main_menu {
             display: none !important;
         }
+
 
         .rd-mobilemenu {}
 
@@ -27,9 +30,16 @@
         .logo {
             margin-right: 10px;
         }
+
+        .main_search {
+            display: none;
+        }
+
     }
 
     #main {
+        box-sizing: border-box;
+        padding: 0px 10px;
         .top {
 
             .slogan {
@@ -47,10 +57,22 @@
                     position: relative;
                     left: 0px;
                     line-height: inherit;
-                    font-size: 12px;
+                    font-size: 0.75rem;
                     bottom: inherit;
                 }
+                .slogan-button {
+                    padding: 10px 12px;
+                    margin-bottom: 10px;
+                }
             }
+        }
+
+        .grid-container {
+            .column {
+                flex: 50%;
+                max-width: 100% !important;
+            }
+            
         }
 
         .main_infor {
@@ -195,7 +217,6 @@
         }
 
         .main_content {
-            padding: 0px 25px 40px;
 
             .grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -227,6 +248,7 @@
 
     #footer {
         .infor_left {
+            font-size: 0.75rem;
             width: 100%;
             margin: 0;
             padding-top: 5px;
@@ -248,9 +270,10 @@
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     #header {
-        .main_menu {
-            display: none !important;
-        }
+
+            .main_menu {
+                display: none !important;
+            }
 
     }
 
@@ -269,11 +292,6 @@
             }
         }
 
-        .main_search {
-            top: -180px;
-            box-sizing: border-box;
-            padding: 0px 25px;
-        }
 
         .custom_wrap {
 
@@ -379,10 +397,43 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
     #header {
-        .rd-mobilepanel {
+        .main_menu {
+            display: none !important;
+        }
+
+
+        .rd-mobilemenu {}
+
+        .rd-mobilemenu.active {
+            display: block !important;
+            margin-top: 39px;
+            width: 100%;
+
+            .rd-mobilemenu_ul {
+                background-color: rgba(0, 0, 0, 0.9);
+                
+                ul {
+                    .main_search {
+                        width: 60% !important;
+                    }
+                    li {
+                        padding-left: 10px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .logo {
+            margin-right: 10px;
+        }
+
+        .main_search {
             display: none;
         }
-    }
+
+        
+}
 
     #main {
 
@@ -391,7 +442,7 @@
             .slogan {
                 right: inherit;
                 box-sizing: border-box;
-                padding: 30px 25px 0px;
+                padding: 60px 25px 0px;
 
                 p {
                     width: 84%;
@@ -502,6 +553,14 @@
                 }
             }
         }
+
+        .grid-container {
+            .column {
+                flex: 40%;
+                flex-wrap: wrap;
+                max-width: 50%;
+            }
+        }
     }
 
 
@@ -510,25 +569,22 @@
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     #main {
+        box-sizing: border-box;
+        padding: 0px 10px;
         .top {
 
             .slogan {
-                right: 0%;
                 box-sizing: border-box;
-                padding: 50px 25px 0px 25px;
 
                 #logo {
                     img {
-                        width: 100%;
+                        width: 50%;
                     }
                 }
 
                 p {
-                    position: relative;
-                    left: 0px;
                     line-height: inherit;
                     font-size: 16px;
-                    bottom: -115px;
                 }
             }
         }
@@ -638,17 +694,18 @@
 
 @media (min-width: 1200px) {
     #header {
-        .rd-mobilepanel {
-            display: none;
-        }
+
+            .rd-mobilepanel {
+                display: none;
+            }
     }
 
-    #main {
-        .top {
-            .slogan {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-    }
+    // #main {
+    //     .top {
+    //         .slogan {
+    //             left: 50%;
+    //             transform: translateX(-50%);
+    //         }
+    //     }
+    // }
 }
