@@ -555,6 +555,7 @@
                     padding: 40px 0 30px 0;
 
                     h3 {
+                        text-align: center;
                         font-size: 16pt;
                     }
                 }
@@ -571,6 +572,8 @@
                             justify-content: space-between;
 
                             .detail-title {
+                                box-sizing: border-box;
+                                padding: 0px 25px;
                                 display: flex;
 
                                 .title-award {
@@ -580,6 +583,8 @@
 
                             .detail-wrap {
                                 display: flex;
+                                box-sizing: border-box;
+                                padding: 0px 25px;
                             }
 
                             .detail-item.awards {
@@ -595,9 +600,7 @@
                                     padding: 0px;
 
                                     li {
-                                        list-style-type: disc;
-                                        margin: 0 0 0 17px;
-                                        padding-right: 10px;
+                                        list-style-type: none;
                                         width: 100%;
 
                                     }
@@ -616,9 +619,7 @@
                                     padding: 0px;
 
                                     li {
-                                        list-style-type: disc;
-                                        margin: 0 0 0 17px;
-                                        padding-right: 10px;
+                                        list-style-type: none;
                                         width: 100%;
                                     }
                                 }

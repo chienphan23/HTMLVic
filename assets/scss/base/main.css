@@ -682,6 +682,7 @@
   padding: 40px 0 30px 0;
 }
 #main .custom_wrap .block_about .container .title h3 {
+  text-align: center;
   font-size: 16pt;
 }
 #main .custom_wrap .block_about .container .content .item {
@@ -694,6 +695,8 @@
   justify-content: space-between;
 }
 #main .custom_wrap .block_about .container .content .item .detail .detail-title {
+  box-sizing: border-box;
+  padding: 0px 25px;
   display: flex;
 }
 #main .custom_wrap .block_about .container .content .item .detail .detail-title .title-award {
@@ -701,6 +704,8 @@
 }
 #main .custom_wrap .block_about .container .content .item .detail .detail-wrap {
   display: flex;
+  box-sizing: border-box;
+  padding: 0px 25px;
 }
 #main .custom_wrap .block_about .container .content .item .detail .detail-item.awards {
   width: 66.6666666667%;
@@ -715,9 +720,7 @@
   padding: 0px;
 }
 #main .custom_wrap .block_about .container .content .item .detail .detail-item.awards ul li {
-  list-style-type: disc;
-  margin: 0 0 0 17px;
-  padding-right: 10px;
+  list-style-type: none;
   width: 100%;
 }
 #main .custom_wrap .block_about .container .content .item .detail .detail-item.publication {
@@ -731,9 +734,7 @@
   padding: 0px;
 }
 #main .custom_wrap .block_about .container .content .item .detail .detail-item.publication ul li {
-  list-style-type: disc;
-  margin: 0 0 0 17px;
-  padding-right: 10px;
+  list-style-type: none;
   width: 100%;
 }
 #main .custom_wrap .block_about .block_logo {
