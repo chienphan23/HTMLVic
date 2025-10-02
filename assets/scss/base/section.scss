@@ -219,10 +219,11 @@
                 border-radius: 20px;
                 font-weight: bold;
                 font-size: 16px;
+
                 &:hover {
-                        background-color: #504f4f;
-                        cursor: pointer;
-                    }
+                    background-color: #504f4f;
+                    cursor: pointer;
+                }
 
             }
 
@@ -496,11 +497,12 @@
 
                 .intro-infor-wrap {
                     display: grid;
-                    grid-template-columns: repeat(3 , 1fr);
+                    grid-template-columns: repeat(3, 1fr);
 
                     .intro-infor {
                         box-sizing: border-box;
                         padding: 10px;
+
                         div {
                             border-radius: 20px;
                             background-color: white;
@@ -512,6 +514,7 @@
                                 font-size: 20px;
                                 margin: 0;
                             }
+
                             span {
                                 display: block;
                                 padding: 10px 0px;
@@ -521,24 +524,26 @@
                         }
                     }
 
-                    
-                }
-                .intro-button {
-                        border: none;
-                        font-size: 20px;
-                        font-weight: bold;
-                        box-sizing: border-box;
-                        padding: 10px 20px;
-                        border-radius: 20px;
-                        margin: 20px 0px;
 
-                        &:hover {
-                            background-color: #504f4f;
-                            color: white;
-                        }
+                }
+
+                .intro-button {
+                    border: none;
+                    font-size: 20px;
+                    font-weight: bold;
+                    box-sizing: border-box;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    margin: 20px 0px;
+
+                    &:hover {
+                        background-color: #504f4f;
+                        color: white;
                     }
+                }
             }
         }
+
         .block_about {
             background: rgba(255, 255, 255, 0.8);
 
