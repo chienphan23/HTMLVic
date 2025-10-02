@@ -86,7 +86,7 @@
                     
                     e.preventDefault();
                     $("#header a").removeClass("active");
-                    $(this).addClass("active");
+                    $("#header .header-portfolio").addClass("active");
                     $("#main").load("./pages/portfolio.html", function() {
                         start = 0;
                         limit = 3;
@@ -121,7 +121,14 @@
                 });
             });
             $("#footer").load("./partials/footer.html");
-            $("#main").load("./pages/portfolio.html");
+            $("#main").load("./pages/portfolio.html", function() {
+                $(".header-contact").on("click", function(e) {
+                    e.preventDefault();
+                    $("#header a").removeClass("active");
+                    $("#header .header-contact").addClass("active");
+                    $("#main").load("./pages/contact.html");
+                });
+            });
         });
 
         $(document).ready(function () {

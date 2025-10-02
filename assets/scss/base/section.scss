@@ -113,6 +113,11 @@
                     background-color: #212121;
                     padding: 10px;
                     border-radius: 20px;
+
+                    &:hover {
+                        background-color: #504f4f;
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -214,6 +219,10 @@
                 border-radius: 20px;
                 font-weight: bold;
                 font-size: 16px;
+                &:hover {
+                        background-color: #504f4f;
+                        cursor: pointer;
+                    }
 
             }
 
@@ -462,6 +471,74 @@
         }
 
         // about page
+        .block_about-intro {
+            text-align: center;
+            margin-bottom: 30px;
+
+            .intro-wrap {
+                background-color: #252525;
+                max-width: 920px;
+                margin: auto;
+                box-sizing: border-box;
+                padding: 20px;
+                border-radius: 20px;
+
+                .intro-title {
+                    color: white;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+
+                .intro-des {
+                    color: white;
+                    font-size: 16px;
+                }
+
+                .intro-infor-wrap {
+                    display: grid;
+                    grid-template-columns: repeat(3 , 1fr);
+
+                    .intro-infor {
+                        box-sizing: border-box;
+                        padding: 10px;
+                        div {
+                            border-radius: 20px;
+                            background-color: white;
+                            box-sizing: border-box;
+
+                            p {
+                                padding: 10px 0px;
+                                font-weight: bold;
+                                font-size: 20px;
+                                margin: 0;
+                            }
+                            span {
+                                display: block;
+                                padding: 10px 0px;
+                                font-weight: 600;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    
+                }
+                .intro-button {
+                        border: none;
+                        font-size: 20px;
+                        font-weight: bold;
+                        box-sizing: border-box;
+                        padding: 10px 20px;
+                        border-radius: 20px;
+                        margin: 20px 0px;
+
+                        &:hover {
+                            background-color: #504f4f;
+                            color: white;
+                        }
+                    }
+            }
+        }
         .block_about {
             background: rgba(255, 255, 255, 0.8);
 
@@ -616,6 +693,10 @@
                         text-transform: capitalize;
                         cursor: pointer;
                         font-size: 13pt;
+
+                        &:hover {
+                            background-color: #504f4f;
+                        }
                     }
                 }
             }

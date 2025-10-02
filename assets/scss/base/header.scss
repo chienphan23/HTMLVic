@@ -19,18 +19,22 @@
 
         }
     }
-
     li.header-hover {
         &:hover a {
             color: white !important;
             background: #333;
         }
+
+        
     }
 
     .logo {
         float: left;
         margin: 0px 0px 0px 1%;
 
+        .header-portfolio.active {
+            color: white;
+        }
         a {
             display: block;
             padding: 10px 0px;
