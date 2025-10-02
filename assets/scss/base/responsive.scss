@@ -646,7 +646,8 @@
     #main {
         .top {
             .slogan {
-                right: 30%;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     }
