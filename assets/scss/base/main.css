@@ -29,7 +29,7 @@
 #header .logo a {
   display: block;
   padding: 10px 0px;
-  font-size: 16px;
+  font-size: 1.2rem;
 }
 #header .main_search {
   box-sizing: border-box;
@@ -50,7 +50,7 @@
   border: none;
   background-color: transparent;
   opacity: 0.5;
-  font-size: 12px;
+  font-size: 1rem;
   border-radius: 20px;
 }
 #header .main_search .main_search-wrap .main_search-input input:focus {
@@ -63,7 +63,7 @@
   align-items: center;
 }
 #header .main_search .main_search-wrap .main_search-input .search-icon i {
-  font-size: 18px;
+  font-size: 1.4rem;
   width: 20px;
   display: inline-block;
   margin: auto;
@@ -133,7 +133,7 @@
   display: block;
   padding: 0;
   color: #bbbbbb;
-  font-size: 16px;
+  font-size: 1.4rem;
   line-height: 45px;
 }
 #header .rd-mobilepanel {
@@ -364,11 +364,11 @@
 }
 #main .main_content .content-title h5 {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.4rem;
 }
 #main .main_content .content-title p {
   font-weight: 200;
-  font-size: 14px;
+  font-size: 1rem;
 }
 #main .grid-container {
   display: flex;
@@ -501,11 +501,11 @@
 }
 #main .custom_wrap .block_about .container .title h3 {
   text-align: center;
-  font-size: 16pt;
+  font-size: 1.6rem;
 }
 #main .custom_wrap .block_about .container .content .item {
   line-height: 25px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 #main .custom_wrap .block_about .container .content .item .detail {
   display: flex;
@@ -624,7 +624,7 @@
   color: #fff;
   text-transform: capitalize;
   cursor: pointer;
-  font-size: 13pt;
+  font-size: 1rem;
 }
 #main .bg_contact .container .contact form .button:hover {
   background-color: #504f4f;
@@ -679,6 +679,9 @@
   #header .logo {
     margin-right: 10px;
   }
+  #header .logo a {
+    font-size: 0.75rem;
+  }
   #header .main_search {
     display: none;
   }
@@ -689,14 +692,11 @@
   #main .top .slogan {
     right: 0%;
     box-sizing: border-box;
-    padding: 50px 25px 0px 25px;
   }
   #main .top .slogan #logo img {
-    width: 35%;
+    width: 50%;
   }
   #main .top .slogan p {
-    position: relative;
-    left: 0px;
     line-height: inherit;
     font-size: 0.75rem;
     bottom: inherit;
@@ -704,6 +704,9 @@
   #main .top .slogan .slogan-button {
     padding: 10px 12px;
     margin-bottom: 10px;
+  }
+  #main .top.model .slogan a img {
+    width: 15% !important;
   }
   #main .grid-container .column {
     flex: 50%;
@@ -791,7 +794,7 @@
     box-sizing: border-box;
   }
   #main .main_search .main_search-wrap .main_search-input input {
-    font-size: 12px;
+    font-size: 1.2rem;
     padding: 10px;
   }
   #main .main_infor {
@@ -806,6 +809,9 @@
     padding-bottom: 5px;
   }
   #footer .infor_left .infor_left_email::before {
+    display: none;
+  }
+  #footer .infor_left .phone {
     display: none;
   }
   #footer .infor_right {
@@ -992,7 +998,7 @@
   }
   #main .top .slogan p {
     line-height: inherit;
-    font-size: 16px;
+    font-size: 1.6rem;
   }
   #main .custom_wrap .top .slogan #logo {
     width: 20%;

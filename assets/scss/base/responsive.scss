@@ -29,6 +29,9 @@
 
         .logo {
             margin-right: 10px;
+            a {
+                font-size: 0.75rem;
+            }
         }
 
         .main_search {
@@ -45,24 +48,31 @@
             .slogan {
                 right: 0%;
                 box-sizing: border-box;
-                padding: 50px 25px 0px 25px;
+                // padding: 50px 25px 0px 25px;
 
                 #logo {
                     img {
-                        width: 35%;
+                        width: 50%;
                     }
                 }
 
                 p {
-                    position: relative;
-                    left: 0px;
-                    line-height: inherit;
+                        line-height: inherit;
                     font-size: 0.75rem;
                     bottom: inherit;
                 }
                 .slogan-button {
                     padding: 10px 12px;
                     margin-bottom: 10px;
+                }
+            }
+        }
+        .top.model {
+            .slogan {
+                a {
+                    img {
+                        width: 15% !important;
+                    }
                 }
             }
         }
@@ -233,7 +243,7 @@
                 .main_search-input {
 
                     input {
-                        font-size: 12px;
+                        font-size: 1.2rem;
                         padding: 10px;
                     }
                 }
@@ -258,6 +268,9 @@
                 &::before {
                     display: none;
                 }
+            }
+            .phone {
+                display: none;
             }
         }
 
@@ -584,7 +597,7 @@
 
                 p {
                     line-height: inherit;
-                    font-size: 16px;
+                    font-size: 1.6rem;
                 }
             }
         }
