@@ -412,6 +412,14 @@
         }
     }
 
+    .grid-container {
+            .column {
+                flex: 40%;
+                flex-wrap: wrap;
+                max-width: 50%;
+            }
+        }
+
 
 }
 

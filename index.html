@@ -34,7 +34,7 @@
 
         // section
         let start = 0;
-        let limit = 12;
+        let limit = 20;
         let allData = [];
         let firstLoad = true;
 
@@ -161,7 +161,8 @@
 
                 $(window).on("scroll", function () {
 
-                    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 50) {
+                    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 450) {
+                        
                         if (start < allData.length) {
                             loadItems();
                         }

@@ -861,6 +861,11 @@
   #main .bg_contact .container .contact form .button {
     width: 30%;
   }
+  .grid-container .column {
+    flex: 40%;
+    flex-wrap: wrap;
+    max-width: 50%;
+  }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   #header .main_menu {
