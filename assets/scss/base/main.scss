@@ -28,5 +28,11 @@ html {
         h4 {
             margin: 0px;
         }
+
+        .animate__animated {
+            --animate-duration: 1s;
+            animation-timing-function: ease-out;
+            }
+          
     }
 }

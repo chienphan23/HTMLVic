@@ -11,7 +11,7 @@
 
         .rd-mobilemenu.active {
             display: block !important;
-            margin-top: 39px;
+            margin-top: 30px;
             width: 100%;
 
             .rd-mobilemenu_ul {
@@ -20,7 +20,6 @@
                 ul {
 
                     li {
-                        padding-left: 10px;
                         padding-bottom: 10px;
                     }
                 }
@@ -34,9 +33,7 @@
             }
         }
 
-        .main_search {
-            display: none;
-        }
+        
 
     }
 
@@ -134,14 +131,28 @@
             //team page
             .block_team {
                 .container {
-
+                    
                     .content {
+                        margin-bottom: 50px;
 
                         ul {
                             display: block;
 
                             li {
                                 width: 100%;
+
+                                .team {
+
+                                    .infor_team {
+                                        text-align: center;
+                                        p {
+                                            span {
+                                                display: inline;
+
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -196,6 +207,8 @@
         }
 
         .bg_contact {
+            display: block;
+            margin-bottom: 100px;
             .container {
                 .contact {
 
@@ -204,6 +217,13 @@
                         display: block;
                         box-sizing: border-box;
                         margin: 70px 0px;
+
+                        .contact-object {
+                            
+                            input {
+                                width: 100%;
+                            }
+                        }
 
                         label {}
 
@@ -233,22 +253,7 @@
             }
         }
 
-        .main_search {
-            top: -65px;
-            padding: 0px 25px;
-            box-sizing: border-box;
-
-            .main_search-wrap {
-
-                .main_search-input {
-
-                    input {
-                        font-size: 1.2rem;
-                        padding: 10px;
-                    }
-                }
-            }
-        }
+        
 
         .main_infor {
             top: -50px;
@@ -257,6 +262,7 @@
     }
 
     #footer {
+        padding: 0px 10px;
         .infor_left {
             font-size: 0.75rem;
             width: 100%;
@@ -374,6 +380,7 @@
         }
 
         .bg_contact {
+            
             .container {
                 .contact {
 
@@ -426,9 +433,7 @@
                 background-color: rgba(0, 0, 0, 0.9);
                 
                 ul {
-                    .main_search {
-                        width: 60% !important;
-                    }
+                    
                     li {
                         padding-left: 10px;
                         padding-bottom: 10px;
@@ -441,9 +446,6 @@
             margin-right: 10px;
         }
 
-        .main_search {
-            display: none;
-        }
 
         
 }
@@ -463,11 +465,6 @@
             }
         }
 
-        .main_search {
-            top: -180px;
-            box-sizing: border-box;
-            padding: 0px 25px;
-        }
 
         .custom_wrap {
 
@@ -534,9 +531,26 @@
                     }
                 }
             }
+
+            .block_team {
+                .container {
+                    .content {
+                        ul {
+                            li {
+                                .team {
+                                    .img_team {
+                                        width: inherit;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .bg_contact {
+            margin-bottom: 50px;
             .container {
                 .contact {
 
@@ -545,6 +559,12 @@
                         display: block;
                         box-sizing: border-box;
                         margin: 70px 0px;
+
+                        .contact-object {
+                            input {
+                                width: 100%;
+                            }
+                        }
 
                         label {}
 
@@ -581,6 +601,12 @@
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
+
+    #header {
+        .rd-mobilepanel {
+            display: none;
+        }
+    }
     #main {
         box-sizing: border-box;
         padding: 0px 10px;
@@ -680,6 +706,12 @@
                         box-sizing: border-box;
                         margin: 70px 0px;
 
+                        .contact-object {
+                            input {
+                                width: 100%;
+                            }
+                        }
+
                         label {}
 
                         input {
@@ -705,11 +737,12 @@
     }
 }
 
+
 @media (min-width: 1200px) {
     #header {
 
             .rd-mobilepanel {
-                display: none;
+                display: none !important;
             }
     }
 

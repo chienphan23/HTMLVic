@@ -8,6 +8,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
 
     <title>Vic Nguyen Design</title>
@@ -60,8 +61,8 @@
                 let ul = $(`.grid-container .column-${colIndex + 1}`);
                 $.each(groupItems, function (i, item) {
 
-                    let li = `
-                        <li>
+                    let li = $(`
+                        <li class="animate__animated animate__fadeInUp">
                             <a class="project fancybox"
                                 href="${item.href}" 
                                 rel="gallery"
@@ -74,7 +75,10 @@
                                 </div>
                             </a>
                         </li>
-                    `;
+                    `);
+                    li.on("animationend", function () {
+                        $(this).removeClass("animate__animated animate__fadeInUp");
+                    });
                     ul.append(li);
                 })
                 $('.grid-container').append(ul);
@@ -171,7 +175,7 @@
             $('.rd-mobilemenu').toggleClass('active');
         });
         $(document).on("click", ".rd-mobilemenu.active", function (e) {
-            if(e.target.className.includes("active")){
+            if (e.target.className.includes("active")) {
                 $('.rd-mobilemenu').removeClass('active');
             }
 

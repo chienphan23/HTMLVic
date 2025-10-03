@@ -5,13 +5,13 @@
     bottom: 0;
     z-index: 1300;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 0px;
 
     .infor_left {
-        float: left;
         width: calc(100% - 170px);
-        margin: 15px 0px 0px 0;
-        padding: 0px 15px;
 
         p {
             line-height: 25px;
@@ -34,26 +34,22 @@
     }
 
     .infor_right {
-        float: right;
-        margin-right: 15px;
 
         ul {
-            float: right;
             width: 100%;
             text-align: right;
             margin: 0px;
+            padding-left: 0px;
 
             li {
                 display: inline-block;
-                margin: 0 5px;
                 text-align: center;
 
                 a {
                     position: relative;
                     color: #000;
                     display: block;
-                    font-size: 18px;
-                    padding: 14px 0px;
+                    font-size: 1.2rem;
                 }
             }
         }
